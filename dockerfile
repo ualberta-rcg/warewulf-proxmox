@@ -39,10 +39,7 @@ RUN apt-get install -y \
     smartmontools \
     lm-sensors \
     python3 \
-    python3-pip
-
-# --- 4. Add Ansible ---
-RUN apt-get install -y ansible
+    ansible
 
 # --- 5. Add Filebeat (Elastic's repo) ---
 RUN wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add - && \
