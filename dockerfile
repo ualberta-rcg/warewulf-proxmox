@@ -2,17 +2,6 @@ FROM debian:bookworm
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-# --- 1. Proxmox Repository Setup ---
-RUN apt-get update && \
-    apt-get install -y gnupg curl wget lsb-release ca-certificates && \
-    echo "deb http://download.proxmox.com/debian/pve bookworm pve-no-subscription" > /etc/apt/sources.list.d/pve-install-repo.list && \
-    curl -fsSL https://enterprise.proxmox.com/debian/proxmox-release-bookworm.gpg | gpg --dearmor -o /etc/apt/trusted.gpg.d/proxmox-release-bookworm.gpg
-
-# --- 2. Install Proxmox VE (with all storage backends) ---
-# This brings in kernel, initrd, ZFS, Ceph, LVM, NFS, etc.
-RUN apt-get update && \
-    apt-get install -y proxmox-ve
-
 # --- 3. Enterprise Tools ---
 RUN apt-get install -y \
     sudo \
@@ -46,6 +35,17 @@ RUN wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add 
     echo "deb https://artifacts.elastic.co/packages/8.x/apt stable main" > /etc/apt/sources.list.d/elastic-8.x.list && \
     apt-get update && \
     apt-get install -y filebeat
+
+# --- 1. Proxmox Repository Setup ---
+RUN apt-get update && \
+    apt-get install -y gnupg curl wget lsb-release ca-certificates && \
+    echo "deb http://download.proxmox.com/debian/pve bookworm pve-no-subscription" > /etc/apt/sources.list.d/pve-install-repo.list && \
+    curl -fsSL https://enterprise.proxmox.com/debian/proxmox-release-bookworm.gpg | gpg --dearmor -o /etc/apt/trusted.gpg.d/proxmox-release-bookworm.gpg
+
+# --- 2. Install Proxmox VE (with all storage backends) ---
+# This brings in kernel, initrd, ZFS, Ceph, LVM, NFS, etc.
+RUN apt-get update && \
+    apt-get install -y proxmox-ve
 
 # --- 6. Configure root password and SSH ---
 RUN echo "root:changeme" | chpasswd
