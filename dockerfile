@@ -11,9 +11,6 @@ RUN apt-get update && apt-get install -y \
     pciutils \
     lvm2 \
     nfs-common \
-    ceph-common \
-    zfsutils-linux \
-    open-iscsi \
     multipath-tools \
     ifupdown \
     rsync \
@@ -28,6 +25,7 @@ RUN apt-get update && apt-get install -y \
     smartmontools \
     lm-sensors \
     python3 \
+    python3-pip \
     ansible
 
 # --- 5. Add Filebeat (Elastic's repo) ---
