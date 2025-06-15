@@ -4,8 +4,6 @@
 
 **Maintained by:** Rahim Khoja ([khoja1@ualberta.ca](mailto:khoja1@ualberta.ca)) & Karim Ali ([kali2@ualberta.ca](mailto:kali2@ualberta.ca))
 
-**Affiliation:** Research Computing Group, University of Alberta
-
 ## 🧰 Description
 
 This repository contains a minimal but functional **Proxmox VE node image** built on Debian Bookworm, packaged into a Docker container that is **Warewulf-compatible** and deployable on bare metal.
@@ -55,6 +53,12 @@ To enable pushing to your Docker Hub:
 
 ### 🚀 Manual Trigger & Auto-Build
 
+* Manual: Run the workflow from the **Actions** tab with **Run workflow** (enabled via `workflow_dispatch`).
+* Automatic: The CI/CD workflow is triggered when you create a **Pull Request that merges `main` into `latest`** using the GitHub UI.
+* **Recommended branching model:**
+
+  * Work and test in `main`
+  * Create a PR from `main` to `latest` to deploy and tag to Docker Hub automatically
 * Manual: Run the workflow from the **Actions** tab with **Run workflow** (enabled via `workflow_dispatch`).
 * Automatic: Any push to the `latest` branch triggers the CI/CD pipeline.
 * **Recommended branching model:**
