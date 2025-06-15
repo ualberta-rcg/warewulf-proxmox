@@ -1,1 +1,98 @@
-r
+![University of Alberta Logo](https://www.ualberta.ca/en/toolkit/media-library/homepage-assets/ua_logo_green_rgb.png)
+---
+
+# Proxmox VE Node Image for Warewulf
+
+**Maintained by:** Rahim Khoja ([khoja1@ualberta.ca](mailto:khoja1@ualberta.ca))
+**Affiliation:** Research Computing Group, University of Alberta
+
+## 🧰 Description
+
+This repository contains a minimal but functional **Proxmox VE node image** built on Debian Bookworm, packaged into a Docker container that is **Warewulf-compatible** and deployable on bare metal.
+
+The image is automatically built and pushed to Docker Hub using GitHub Actions whenever changes are pushed to the `latest` branch.
+
+## 📦 Docker Image
+
+**Docker Hub:** [rkhoja/warewulf-proxmox\:latest](https://hub.docker.com/r/rkhoja/warewulf-proxmox)
+
+```bash
+docker pull rkhoja/warewulf-proxmox:latest
+```
+
+## 🏗️ What's Inside
+
+This container includes:
+
+* **Proxmox VE** (from the no-subscription repo)
+* SSH, LVM, NFS, smartmontools, ipmitool, sensors
+* Python 3 and Ansible for automation
+* Configured for `/sbin/init` boot (Warewulf default entrypoint)
+
+It also sets a root password to `changeme` (please change it in production setups).
+
+## 🛠️ GitHub Actions - CI/CD Pipeline
+
+This project includes a GitHub Actions workflow: `.github/workflows/deploy-warewulf-proxmox.yml`.
+
+### 🔄 What It Does
+
+* Builds the Docker image from the `Dockerfile`
+* Logs into Docker Hub using stored GitHub Secrets
+* Pushes the image tagged as the current branch (usually `latest`)
+
+### ✅ Setting Up GitHub Secrets
+
+To enable pushing to your Docker Hub:
+
+1. Go to your fork’s GitHub repo → **Settings** → **Secrets and variables** → **Actions**
+2. Add the following:
+
+   * `DOCKER_HUB_USER` → your Docker Hub username
+   * `DOCKER_HUB_TOKEN` → create a [Docker Hub access token](https://hub.docker.com/settings/security)
+
+### 🚀 Manual Trigger
+
+You can run the workflow manually in the **Actions** tab using **Run workflow** (thanks to `workflow_dispatch`).
+
+## 🧪 How To Use This Image with Warewulf 4
+
+Once you have Warewulf 4 setup on your control node:
+
+```bash
+warewulf import docker rkhoja/warewulf-proxmox:latest --name=proxmox-node
+```
+
+Then assign the image to a compute node:
+
+```bash
+wwctl node set n00[1-4] --container=proxmox-node
+wwctl configure -a
+```
+
+Finally boot the nodes via PXE.
+
+---
+
+## 🤝 Support
+
+This project is provided as-is, but reasonable questions may be answered based on my coffee intake or mood. ;)
+
+Feel free to open an issue or email **[khoja1@ualberta.ca](mailto:khoja1@ualberta.ca)** for U of A related deployments.
+
+---
+
+## 📜 License
+
+This project is licensed under the **Apache License 2.0**, which is widely used for infrastructure and container projects.
+
+> SPDX-License-Identifier: Apache-2.0
+> [https://www.apache.org/licenses/LICENSE-2.0.html](https://www.apache.org/licenses/LICENSE-2.0.html)
+
+---
+
+## 🧠 About University of Alberta Research Computing
+
+The [Research Computing Group](https://www.ualberta.ca/research-computing/index.html) supports high-performance computing, data-intensive research, and advanced infrastructure for researchers at the University of Alberta and across Canada.
+
+We help design and operate compute environments that power innovation — from AI training clusters to national research infrastructure.
