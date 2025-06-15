@@ -8,7 +8,7 @@
 
 This repository contains a minimal but functional **Proxmox VE node image** built on Debian Bookworm, packaged into a Docker container that is **Warewulf-compatible** and deployable on bare metal.
 
-It’s primarily used for imaging and provisioning compute nodes in HPC or virtualized environments using [Warewulf 4](https://warewulf.org), and is tailored to interoperate with Proxmox VE and common enterprise tools.
+It's primarily used for imaging and provisioning compute nodes in HPC or virtualized environments using [Warewulf 4](https://warewulf.org), and is tailored to interoperate with Proxmox VE and common enterprise tools.
 
 The image is automatically built and pushed to Docker Hub using GitHub Actions whenever changes are pushed to the `latest` branch.
 
@@ -45,7 +45,7 @@ This project includes a GitHub Actions workflow: `.github/workflows/deploy-warew
 
 To enable pushing to your Docker Hub:
 
-1. Go to your fork’s GitHub repo → **Settings** → **Secrets and variables** → **Actions**
+1. Go to your fork's GitHub repo → **Settings** → **Secrets and variables** → **Actions**
 2. Add the following:
 
    * `DOCKER_HUB_USER` → your Docker Hub username
@@ -93,7 +93,7 @@ Finally boot the nodes via PXE.
 
 ## 🤝 Support
 
-This project is provided as-is, but reasonable questions may be answered based on my coffee intake or mood. ;)
+Many Bothans died to bring us this information. This project is provided as-is, but reasonable questions may be answered based on my coffee intake or mood. ;)
 
 Feel free to open an issue or email **[khoja1@ualberta.ca](mailto:khoja1@ualberta.ca)** or **[kali2@ualberta.ca](mailto:kali2@ualberta.ca)** for U of A related deployments.
 
@@ -101,10 +101,27 @@ Feel free to open an issue or email **[khoja1@ualberta.ca](mailto:khoja1@ualbert
 
 ## 📜 License
 
-This project is licensed under the **Apache License 2.0**, which is widely used for infrastructure and container projects.
+This project is released under the **Apache License 2.0** - a permissive open-source license that allows for both personal and commercial use, modification, and distribution.
 
-> SPDX-License-Identifier: Apache-2.0
-> [https://www.apache.org/licenses/LICENSE-2.0.html](https://www.apache.org/licenses/LICENSE-2.0.html)
+**Key permissions:**
+- ✅ Commercial use
+- ✅ Modification  
+- ✅ Distribution
+- ✅ Patent use
+- ✅ Private use
+
+**Requirements:**
+- Include copyright notice
+- Include license text
+- State changes made to the code
+
+The Apache 2.0 license is widely adopted in enterprise and infrastructure projects, making this container safe to use in both academic research and commercial deployments.
+
+**Full license text:** [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+
+```
+SPDX-License-Identifier: Apache-2.0
+```
 
 ---
 
