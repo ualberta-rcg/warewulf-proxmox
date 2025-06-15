@@ -89,15 +89,11 @@ wwctl configure -a
 
 Finally boot the nodes via PXE.
 
----
-
 ## 🤝 Support
 
 Many Bothans died to bring us this information. This project is provided as-is, but reasonable questions may be answered based on my coffee intake or mood. ;)
 
 Feel free to open an issue or email **[khoja1@ualberta.ca](mailto:khoja1@ualberta.ca)** or **[kali2@ualberta.ca](mailto:kali2@ualberta.ca)** for U of A related deployments.
-
----
 
 ## 📜 License
 
@@ -114,8 +110,6 @@ This project is released under the **MIT License** - one of the most permissive 
 That's it! No other strings attached. The MIT License is trusted by major projects worldwide and removes virtually all legal barriers to using this code.
 
 **Full license text:** [MIT License](https://opensource.org/licenses/MIT)
-
----
 
 ## 🧠 About University of Alberta Research Computing
 
