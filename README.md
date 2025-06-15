@@ -115,13 +115,7 @@ This project is released under the **Apache License 2.0** - a permissive open-so
 - Include license text
 - State changes made to the code
 
-The Apache 2.0 license is widely adopted in enterprise and infrastructure projects, making this container safe to use in both academic research and commercial deployments.
-
 **Full license text:** [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
-
-```
-SPDX-License-Identifier: Apache-2.0
-```
 
 ---
 
