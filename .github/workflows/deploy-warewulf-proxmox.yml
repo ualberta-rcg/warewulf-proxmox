@@ -20,7 +20,7 @@ jobs:
 
       - name: 🐳 Build Docker Image
         run: |
-          docker build -t {{ secrets.DOCKER_REPO }}:$TAG_NAME .
+          docker build -t ${{ secrets.DOCKER_REPO }}:$TAG_NAME .
 
       - name: 🚀 Login to DockerHub
         run: |
@@ -28,4 +28,4 @@ jobs:
 
       - name: 🚀 Push Image to DockerHub
         run: |
-          docker push {{ secrets.DOCKER_REPO }}:$TAG_NAME
+          docker push ${{ secrets.DOCKER_REPO }}:$TAG_NAME
