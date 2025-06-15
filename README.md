@@ -2,6 +2,11 @@
 
 # Proxmox VE Node Image for Warewulf
 
+[![CI/CD](https://github.com/ualberta-rcg/warewulf-proxmox/actions/workflows/deploy-warewulf-proxmox.yml/badge.svg)](https://github.com/ualberta-rcg/warewulf-proxmox/actions/workflows/deploy-warewulf-proxmox.yml)
+![Docker Pulls](https://img.shields.io/docker/pulls/rkhoja/warewulf-proxmox?style=flat-square)
+![Docker Image Size](https://img.shields.io/docker/image-size/rkhoja/warewulf-proxmox/latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
+
 **Maintained by:** Rahim Khoja ([khoja1@ualberta.ca](mailto:khoja1@ualberta.ca)) & Karim Ali ([kali2@ualberta.ca](mailto:kali2@ualberta.ca))
 
 ## 🧰 Description
