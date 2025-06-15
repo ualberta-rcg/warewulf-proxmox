@@ -1,14 +1,16 @@
-![University of Alberta Logo](https://www.ualberta.ca/en/toolkit/media-library/homepage-assets/ua_logo_green_rgb.png)
----
-
 # Proxmox VE Node Image for Warewulf
-
+<img src="https://www.ualberta.ca/en/toolkit/media-library/homepage-assets/ua_logo_green_rgb.png" alt="University of Alberta Logo" width="50%" />
 **Maintained by:** Rahim Khoja ([khoja1@ualberta.ca](mailto:khoja1@ualberta.ca))
+                   Karim Ali ([kali2@ualberta.ca](mailto:kali2@ualberta.ca))
 **Affiliation:** Research Computing Group, University of Alberta
+
+---
 
 ## 🧰 Description
 
 This repository contains a minimal but functional **Proxmox VE node image** built on Debian Bookworm, packaged into a Docker container that is **Warewulf-compatible** and deployable on bare metal.
+
+It’s primarily used for imaging and provisioning compute nodes in HPC or virtualized environments using [Warewulf 4](https://warewulf.org), and is tailored to interoperate with Proxmox VE and common enterprise tools.
 
 The image is automatically built and pushed to Docker Hub using GitHub Actions whenever changes are pushed to the `latest` branch.
 
@@ -51,9 +53,20 @@ To enable pushing to your Docker Hub:
    * `DOCKER_HUB_USER` → your Docker Hub username
    * `DOCKER_HUB_TOKEN` → create a [Docker Hub access token](https://hub.docker.com/settings/security)
 
-### 🚀 Manual Trigger
+### 🚀 Manual Trigger & Auto-Build
 
-You can run the workflow manually in the **Actions** tab using **Run workflow** (thanks to `workflow_dispatch`).
+* Manual: Run the workflow from the **Actions** tab with **Run workflow** (enabled via `workflow_dispatch`).
+* Automatic: Any push to the `latest` branch triggers the CI/CD pipeline.
+* **Recommended branching model:**
+
+  * Work in `main`
+  * Merge or fast-forward `main` to `latest` to trigger a production build
+
+```bash
+git checkout latest
+git merge main
+git push origin latest
+```
 
 ## 🧪 How To Use This Image with Warewulf 4
 
