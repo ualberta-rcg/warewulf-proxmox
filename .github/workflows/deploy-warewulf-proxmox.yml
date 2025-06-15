@@ -7,7 +7,6 @@ on:
   workflow_dispatch: # Allows manual trigger in the Actions UI
 
 env:
-  DOCKER_REPO: rkhoja/warewulf-proxmox
   TAG_NAME: ${{ github.ref_name }}
 
 jobs:
@@ -21,7 +20,7 @@ jobs:
 
       - name: 🐳 Build Docker Image
         run: |
-          docker build -t $DOCKER_REPO:$TAG_NAME .
+          docker build -t ${{ secrets.DOCKER_REPO }}:$TAG_NAME .
 
       - name: 🚀 Login to DockerHub
         run: |
@@ -29,4 +28,4 @@ jobs:
 
       - name: 🚀 Push Image to DockerHub
         run: |
-          docker push $DOCKER_REPO:$TAG_NAME
+          docker push ${{ secrets.DOCKER_REPO }}:$TAG_NAME
