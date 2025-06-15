@@ -110,6 +110,6 @@ This project is licensed under the **Apache License 2.0**, which is widely used 
 
 ## 🧠 About University of Alberta Research Computing
 
-The [Research Computing Group] (https://www.ualberta.ca/en/information-services-and-technology/research-computing/index.html) supports high-performance computing, data-intensive research, and advanced infrastructure for researchers at the University of Alberta and across Canada.
+The [Research Computing Group](https://www.ualberta.ca/en/information-services-and-technology/research-computing/index.html) supports high-performance computing, data-intensive research, and advanced infrastructure for researchers at the University of Alberta and across Canada.
 
 We help design and operate compute environments that power innovation — from AI training clusters to national research infrastructure.
