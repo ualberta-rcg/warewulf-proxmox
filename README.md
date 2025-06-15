@@ -1,10 +1,9 @@
-# Proxmox VE Node Image for Warewulf
 <img src="https://www.ualberta.ca/en/toolkit/media-library/homepage-assets/ua_logo_green_rgb.png" alt="University of Alberta Logo" width="50%" />
+# Proxmox VE Node Image for Warewulf
+
 **Maintained by:** Rahim Khoja ([khoja1@ualberta.ca](mailto:khoja1@ualberta.ca))
                    Karim Ali ([kali2@ualberta.ca](mailto:kali2@ualberta.ca))
 **Affiliation:** Research Computing Group, University of Alberta
-
----
 
 ## 🧰 Description
 
