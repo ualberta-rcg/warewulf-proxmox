@@ -95,7 +95,7 @@ Finally boot the nodes via PXE.
 
 This project is provided as-is, but reasonable questions may be answered based on my coffee intake or mood. ;)
 
-Feel free to open an issue or email **[khoja1@ualberta.ca](mailto:khoja1@ualberta.ca)** for U of A related deployments.
+Feel free to open an issue or email **[khoja1@ualberta.ca](mailto:khoja1@ualberta.ca)** or **[kali2@ualberta.ca](mailto:kali2@ualberta.ca)** for U of A related deployments.
 
 ---
 
