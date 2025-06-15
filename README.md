@@ -101,21 +101,19 @@ Feel free to open an issue or email **[khoja1@ualberta.ca](mailto:khoja1@ualbert
 
 ## 📜 License
 
-This project is released under the **Apache License 2.0** - a permissive open-source license that allows for both personal and commercial use, modification, and distribution.
+This project is released under the **MIT License** - one of the most permissive open-source licenses available.
 
-**Key permissions:**
-- ✅ Commercial use
-- ✅ Modification  
-- ✅ Distribution
-- ✅ Patent use
-- ✅ Private use
+**What this means:**
+- ✅ Use it for anything (personal, commercial, whatever)
+- ✅ Modify it however you want
+- ✅ Distribute it freely
+- ✅ Include it in proprietary software
 
-**Requirements:**
-- Include copyright notice
-- Include license text
-- State changes made to the code
+**The only requirement:** Keep the copyright notice somewhere in your project.
 
-**Full license text:** [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+That's it! No other strings attached. The MIT License is trusted by major projects worldwide and removes virtually all legal barriers to using this code.
+
+**Full license text:** [MIT License](https://opensource.org/licenses/MIT)
 
 ---
 
