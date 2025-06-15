@@ -104,7 +104,7 @@ This project is released under the **MIT License** - one of the most permissive 
 
 That's it! No other strings attached. The MIT License is trusted by major projects worldwide and removes virtually all legal barriers to using this code.
 
-**Full license text:** [MIT License](https://opensource.org/licenses/MIT)
+**Full license text:** [MIT License](./LICENSE)
 
 ## 🧠 About University of Alberta Research Computing
 
