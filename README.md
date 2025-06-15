@@ -48,6 +48,7 @@ To enable pushing to your Docker Hub:
 1. Go to your fork's GitHub repo → **Settings** → **Secrets and variables** → **Actions**
 2. Add the following:
 
+   * `DOCKER_HUB_REPO` → your Docker Hub repo. In this case: *rkhoja/warewulf-proxmox* 
    * `DOCKER_HUB_USER` → your Docker Hub username
    * `DOCKER_HUB_TOKEN` → create a [Docker Hub access token](https://hub.docker.com/settings/security)
 
